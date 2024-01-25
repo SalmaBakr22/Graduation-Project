@@ -15,6 +15,6 @@
 
 /*--------------------- Functions Prototypes ---------------------------*/
 
-uint8_t LS_Read(DIO_PIN_type p);
+uint8 LS_Read(uint8 p);
 
 #endif /* LIMIT SWITCH_H_ */

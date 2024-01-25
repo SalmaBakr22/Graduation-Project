@@ -10,7 +10,7 @@
 #include "IR Sensor.h"
 		/*--------------------- Global Variables ------------------*/
 
-static uint16_t x;
+static uint16 x;
 		
 // pin will be High as any thing within the Detection Distance
 // The potentiometer R5 is used to adjust how sensitive the sensor is. 
@@ -18,9 +18,9 @@ static uint16_t x;
 
 		/*------------------------- Function Definitions -----------------------------*/
 		
-uint8_t IR_Read(DIO_PIN_type p)
+uint8_t IR_Read(uint8 p)
 {
-	x= DIO_Readpin(p); 
+	 DIO_enuReadPinValue(p,x); 
 	return x;
 }
 

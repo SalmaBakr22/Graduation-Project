@@ -15,6 +15,6 @@
 
 		/*--------------------- Functions Prototypes ---------------------------*/
 
-uint8_t IR_Read(DIO_PIN_type p);
+uint8 IR_Read(uint8 p);
 
 #endif /* IR SENSOR_H_ */

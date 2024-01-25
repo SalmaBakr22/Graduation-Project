@@ -50,7 +50,7 @@
 #define OCR1AL    *((volatile uint8 *) 0x4A)
 #define OCR1BH    *((volatile uint8 *) 0x49)
 #define OCR1BL    *((volatile uint8 *) 0x48)
-#define ICR1L     *((volatile uint8 *) 0x46)
+#define ICR1L     *((volatile uint16 *) 0x46)
 #define ICR1H     *((volatile uint8 *) 0x47)
 #define TIMSK     *((volatile uint8 *) 0x59)
 #define TIFR      *((volatile uint8 *) 0x58)

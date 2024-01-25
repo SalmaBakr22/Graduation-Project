@@ -13,7 +13,7 @@
 
 #include "../MCAL/DIO.h"
 
-#define  buzzer PINB6
+#define  buzzer 14
 		/*--------------------- Functions Prototypes ---------------------------*/
 
 void Buzzer_on();

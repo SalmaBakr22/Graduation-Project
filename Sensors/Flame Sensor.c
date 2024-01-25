@@ -11,15 +11,15 @@
 
 /*--------------------- Global Variables ------------------*/
 
-static uint16_t x;
+static uint16 x;
 
 	
 // PIN connected to the Flame Sensor should read 1 when fire is detected
 
 /*------------------------- Function Definitions -----------------------------*/
 
-uint8_t Flame_Read(DIO_PIN_type p)
+uint8_t Flame_Read(uint8 p)
 {
-	x= DIO_Readpin(p);
+	 DIO_enuReadPinValue(p,x);
 	return x;
 }

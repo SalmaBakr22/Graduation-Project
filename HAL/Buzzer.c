@@ -12,10 +12,10 @@
 
 void Buzzer_on()
 {
-	DIO_Writepin(buzzer,HIGH);
+	DIO_enuSetPinValue(buzzer,1);
 }
 
 void Buzzer_off()
 {
-	DIO_Writepin(buzzer,LOW);
+	DIO_enuSetPinValue(buzzer,0);
 }

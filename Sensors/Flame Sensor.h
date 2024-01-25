@@ -15,7 +15,7 @@
 
 /*--------------------- Functions Prototypes ---------------------------*/
 
-uint8_t Flame_Read(DIO_PIN_type p);
+uint8 Flame_Read(uint8 p);
 
 
 

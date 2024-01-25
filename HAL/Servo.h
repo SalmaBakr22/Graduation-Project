@@ -9,13 +9,12 @@
 #ifndef SERVO_H_
 #define SERVO_H_
 
-#include "../MemoryMap.h"
-#include "stdint.h"
+#include "Lib/STD_Types.h"
 
-#define  SERVO_PIN       OCR1A
+#define  SERVO_PIN       29
 
 void Servo_Init(void);
-void Servo_Angle(uint8_t angle);
+void Servo_Angle(uint8 angle);
 
 
 

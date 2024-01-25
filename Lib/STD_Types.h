@@ -8,6 +8,8 @@
 #ifndef STD_TYPES_H
 #define STD_TYPES_H
 
+typedef void (*pf)(void);
+
 typedef signed char              sint8  ;
 typedef unsigned char            uint8  ;
 typedef signed short int         sint16 ;

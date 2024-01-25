@@ -15,7 +15,7 @@
 		
 		/*--------------------- Functions Prototypes ---------------------------*/
 
-uint8_t LDR_Read(ADC_Channel cha);
+uint8_t LDR_Read(uint8 cha);
 
 
 #endif /* LDR_H_ */
