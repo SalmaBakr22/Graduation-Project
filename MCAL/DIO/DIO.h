@@ -7,6 +7,7 @@
 
 #ifndef DIO_H
 #define DIO_H
+#include "../../Lib/STD_Types.h"
 
 void DIO_vidInit(void);
 

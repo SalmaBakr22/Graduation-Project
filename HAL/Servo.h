@@ -9,8 +9,9 @@
 #ifndef SERVO_H_
 #define SERVO_H_
 
-#include "Lib/STD_Types.h"
-
+#include "../Lib/STD_Types.h"
+#include "../MCAL/Timer1/TIM1_priv.h"
+#include "../MCAL/Timer1/TIM1_cfg.h"
 #define  SERVO_PIN       29
 
 void Servo_Init(void);

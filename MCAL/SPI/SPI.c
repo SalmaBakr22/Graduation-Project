@@ -4,8 +4,8 @@
  *  Created on: Oct 21, 2023
  *      Author: ASUS
  */
-#include "STD_Types.h"
-#include "BIT_MATH.h"
+#include "../../Lib/STD_Types.h"
+#include "../../Lib/BIT_MATH.h"
 
 #include "SPI.h"
 #include "SPI_cfg.h"

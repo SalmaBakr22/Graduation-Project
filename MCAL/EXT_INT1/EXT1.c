@@ -1,5 +1,5 @@
-#include "STD_Types.h"
-#include "BIT_Math.h"
+#include "../../Lib/STD_Types.h"
+#include "../../Lib/BIT_Math.h"
 #include "EXT1.h"
 #include "EXT1_cfg.h"
 #include "EXT1_priv.h"

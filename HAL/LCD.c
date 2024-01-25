@@ -1,8 +1,8 @@
 #include <util/delay.h>
-#include "STD_Types.h"
-#include "BIT_Math.h"
+#include "../lib/STD_Types.h"
+#include "../Lib/BIT_Math.h"
 
-#include "DIO.h"
+#include "../MCAL/DIO/DIO.h"
 
 #include "LCD.h"
 #include "LCD_cfg.h"

@@ -1,5 +1,5 @@
-#include "STD_Types.h"
-#include "BIT_Math.h"
+#include "../../Lib/STD_Types.h"
+#include "../../Lib/BIT_Math.h"
 
 #include "TIM2.h"
 #include "TIM2_cfg.h"
@@ -11,8 +11,8 @@ void TIM2_vidInit(void)
 {
  uint8 u8Tccr2Loc = 0 ;
  
- u8Tccr2Loc |= (TIM2_MODE & 0b00000001) << 6
- u8Tccr2Loc |= (TIM2_MODE & 0b00000010) << 3
+ u8Tccr2Loc |= (TIM2_MODE & 0b00000001) << 6;
+ u8Tccr2Loc |= (TIM2_MODE & 0b00000010) << 3;
  u8Tccr2Loc |= TIM2_OUTPUT_MODE << 4 ;
  u8Tccr2Loc |= TIM2_PRESC  ;
   /* apply data collected in variable officially regester by write operation */

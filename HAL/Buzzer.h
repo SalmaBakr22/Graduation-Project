@@ -11,7 +11,7 @@
 
 		/*----------------- Libraries and Definitions ------------*/
 
-#include "../MCAL/DIO.h"
+#include "../MCAL/DIO/DIO.h"
 
 #define  buzzer 14
 		/*--------------------- Functions Prototypes ---------------------------*/

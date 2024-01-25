@@ -1,5 +1,5 @@
-#include "STD_Types.h"
-#include "BIT_Math.h"
+#include "../../Lib/STD_Types.h"
+#include "../../Lib/BIT_Math.h"
 
 #include "ADC.h"
 #include "ADC_cfg.h"
