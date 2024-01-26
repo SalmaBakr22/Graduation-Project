@@ -9,6 +9,9 @@
 #ifndef SMOKE_SENSOR_H_
 #define SMOKE_SENSOR_H_
 
+#include "../MCAL/ADC.h"
+
+uint8_t Smoke_read(ADC_Channel cha);
 
 
 

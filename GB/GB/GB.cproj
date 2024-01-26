@@ -120,6 +120,30 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="APP\Safety.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\Safety.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\To_Park.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\To_Park.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\To_Start.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\To_Start.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\To_Take_out.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="APP\To_Take_out.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="HAL\Buzzer.c">
       <SubType>compile</SubType>
     </Compile>
@@ -261,6 +285,18 @@
     <Compile Include="Sensors\LM35.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="Sensors\Smoke_Sensor.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Sensors\Smoke_Sensor.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Sensors\Ultrasonic_Sensor.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Sensors\Ultrasonic_Sensor.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Services\queue.c">
       <SubType>compile</SubType>
     </Compile>
@@ -287,6 +323,7 @@
     <Folder Include="Debug\" />
     <Folder Include="HAL\" />
     <Folder Include="MCAL\" />
+    <Folder Include="APP" />
     <Folder Include="Sensors\" />
     <Folder Include="Services\" />
   </ItemGroup>

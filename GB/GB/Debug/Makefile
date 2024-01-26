@@ -36,12 +36,17 @@ SUBDIRS :=  \
 ../Debug/ \
 ../HAL/ \
 ../MCAL/ \
+../APP \
 ../Sensors/ \
 ../Services/
 
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
+../APP/Safety.c \
+../APP/To_Park.c \
+../APP/To_Start.c \
+../APP/To_Take_out.c \
 ../HAL/Buzzer.c \
 ../HAL/DCmotor.c \
 ../HAL/Keypad.c \
@@ -66,6 +71,8 @@ C_SRCS +=  \
 ../Sensors/IR\ Sensor.c \
 ../Sensors/LDR.c \
 ../Sensors/LM35.c \
+../Sensors/Smoke_Sensor.c \
+../Sensors/Ultrasonic_Sensor.c \
 ../Services/queue.c \
 ../Services/Stack.c \
 ../Services/UART_services.c
@@ -78,6 +85,10 @@ ASM_SRCS +=
 
 
 OBJS +=  \
+APP/Safety.o \
+APP/To_Park.o \
+APP/To_Start.o \
+APP/To_Take_out.o \
 HAL/Buzzer.o \
 HAL/DCmotor.o \
 HAL/Keypad.o \
@@ -102,11 +113,17 @@ Sensors/Flame\ Sensor.o \
 Sensors/IR\ Sensor.o \
 Sensors/LDR.o \
 Sensors/LM35.o \
+Sensors/Smoke_Sensor.o \
+Sensors/Ultrasonic_Sensor.o \
 Services/queue.o \
 Services/Stack.o \
 Services/UART_services.o
 
 OBJS_AS_ARGS +=  \
+APP/Safety.o \
+APP/To_Park.o \
+APP/To_Start.o \
+APP/To_Take_out.o \
 HAL/Buzzer.o \
 HAL/DCmotor.o \
 HAL/Keypad.o \
@@ -131,11 +148,17 @@ MCAL/WD_Timer.o \
 "Sensors/IR Sensor.o" \
 Sensors/LDR.o \
 Sensors/LM35.o \
+Sensors/Smoke_Sensor.o \
+Sensors/Ultrasonic_Sensor.o \
 Services/queue.o \
 Services/Stack.o \
 Services/UART_services.o
 
 C_DEPS +=  \
+APP/Safety.d \
+APP/To_Park.d \
+APP/To_Start.d \
+APP/To_Take_out.d \
 HAL/Buzzer.d \
 HAL/DCmotor.d \
 HAL/Keypad.d \
@@ -160,11 +183,17 @@ Sensors/Flame\ Sensor.d \
 Sensors/IR\ Sensor.d \
 Sensors/LDR.d \
 Sensors/LM35.d \
+Sensors/Smoke_Sensor.d \
+Sensors/Ultrasonic_Sensor.d \
 Services/queue.d \
 Services/Stack.d \
 Services/UART_services.d
 
 C_DEPS_AS_ARGS +=  \
+APP/Safety.d \
+APP/To_Park.d \
+APP/To_Start.d \
+APP/To_Take_out.d \
 HAL/Buzzer.d \
 HAL/DCmotor.d \
 HAL/Keypad.d \
@@ -189,6 +218,8 @@ MCAL/WD_Timer.d \
 "Sensors/IR Sensor.d" \
 Sensors/LDR.d \
 Sensors/LM35.d \
+Sensors/Smoke_Sensor.d \
+Sensors/Ultrasonic_Sensor.d \
 Services/queue.d \
 Services/Stack.d \
 Services/UART_services.d
@@ -207,6 +238,34 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU C Compiler
+APP/Safety.o: ../APP/Safety.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32a -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32a" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+APP/To_Park.o: ../APP/To_Park.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32a -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32a" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+APP/To_Start.o: ../APP/To_Start.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32a -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32a" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+APP/To_Take_out.o: ../APP/To_Take_out.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32a -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32a" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
 HAL/Buzzer.o: ../HAL/Buzzer.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
@@ -369,6 +428,20 @@ Sensors/LDR.o: ../Sensors/LDR.c
 	
 
 Sensors/LM35.o: ../Sensors/LM35.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32a -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32a" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+Sensors/Smoke_Sensor.o: ../Sensors/Smoke_Sensor.c
+	@echo Building file: $<
+	@echo Invoking: AVR/GNU C Compiler : 5.4.0
+	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32a -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32a" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+Sensors/Ultrasonic_Sensor.o: ../Sensors/Ultrasonic_Sensor.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32a -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32a" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

@@ -2,6 +2,14 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
+APP\Safety.c
+
+APP\To_Park.c
+
+APP\To_Start.c
+
+APP\To_Take_out.c
+
 HAL\Buzzer.c
 
 HAL\DCmotor.c
@@ -49,6 +57,10 @@ Sensors\IR Sensor.c
 Sensors\LDR.c
 
 Sensors\LM35.c
+
+Sensors\Smoke_Sensor.c
+
+Sensors\Ultrasonic_Sensor.c
 
 Services\queue.c
 

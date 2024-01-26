@@ -19,3 +19,8 @@ void Buzzer_off()
 {
 	DIO_Writepin(buzzer,LOW);
 }
+
+void Buzzer_Tog()
+{
+	DIO_Toggle(buzzer);
+}
