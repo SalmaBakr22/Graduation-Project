@@ -12,8 +12,6 @@ APP\To_Take_out.c
 
 HAL\Buzzer.c
 
-HAL\DCmotor.c
-
 HAL\Keypad.c
 
 HAL\LCD.c

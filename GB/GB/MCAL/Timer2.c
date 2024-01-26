@@ -33,89 +33,20 @@ static uint32_t C_set=0;
 
 	/*------------------------- Function Definition Of initializing the timer 2  -----------------------------*/
 
-	void TIMER2_Init(Operation_Mode2 mode,Timer2_Scaler scalar,OC2_Mode OC )
-	{
-		switch (mode){
-			case nORMAL_MODE:
-			CLEAR_BIT(TCCR2,WGM20);
-			CLEAR_BIT(TCCR2,WGM21);
-			break;
-			case pWM:
-			SET_BIT(TCCR2,WGM20);
-			CLEAR_BIT(TCCR2,WGM21);
-			break;
-			case cTC:
-			CLEAR_BIT(TCCR2,WGM20);
-			SET_BIT(TCCR2,WGM21);
-			break;
-			case fAST_PWM:
-			SET_BIT(TCCR2,WGM20);
-			SET_BIT(TCCR2,WGM21);
-			break;
+	void TIMER2_Init()
+	{	
+		// cTC:
+		CLEAR_BIT(TCCR2,WGM20);
+		SET_BIT(TCCR2,WGM21);
 			
-		}
-		switch(scalar){
-			case TIMER2_STOP:
-			CLEAR_BIT(TCCR2,CS20);
-			CLEAR_BIT(TCCR2,CS21);
-			CLEAR_BIT(TCCR2,CS22);
-			break;
-			case TIMER2_SCALER_1:
-			SET_BIT(TCCR2,CS20);
-			CLEAR_BIT(TCCR2,CS21);
-			CLEAR_BIT(TCCR2,CS22);
-			break;
-			case TIMER2_SCALER_8:
-			CLEAR_BIT(TCCR2,CS20);
-			SET_BIT(TCCR2,CS21);
-			CLEAR_BIT(TCCR2,CS22);
-			break;
-			case TIMER2_SCALER_32:
-			SET_BIT(TCCR2,CS20);
-			SET_BIT(TCCR2,CS21);
-			CLEAR_BIT(TCCR2,CS22);
-			break;
-			case TIMER2_SCALER_64:
-			CLEAR_BIT(TCCR2,CS20);
-			CLEAR_BIT(TCCR2,CS21);
-			SET_BIT(TCCR2,CS22);
-			break;
-			case TIMER2_SCALER_128:
-			SET_BIT(TCCR2,CS20);
-			CLEAR_BIT(TCCR2,CS21);
-			SET_BIT(TCCR2,CS22);
-			break;
-			case TIMER2_SCALER_256:
-			CLEAR_BIT(TCCR2,CS20);
-			SET_BIT(TCCR2,CS21);
-			SET_BIT(TCCR2,CS22);
-			break;
-			case TIMER2_SCALER_1024:
-			SET_BIT(TCCR2,CS20);
-			SET_BIT(TCCR2,CS21);
-			SET_BIT(TCCR2,CS22);
-			break;
-
-		}
-		switch (OC){
-			case disconnected:
-			CLEAR_BIT(TCCR2,COM20);
-			CLEAR_BIT(TCCR2,COM21);
-			break;
-			case toggle:
-			SET_BIT(TCCR2,COM20);
-			CLEAR_BIT(TCCR2,COM21);
-			break;
-			case noninverting:
-			CLEAR_BIT(TCCR2,COM20);
-			SET_BIT(TCCR2,COM21);
-			break;
-			case inverting:
-			SET_BIT(TCCR2,COM20);
-			SET_BIT(TCCR2,COM21);
-			break;
-		}
-		
+		// TIMER2_SCALER_8:
+		CLEAR_BIT(TCCR2,CS20);
+		SET_BIT(TCCR2,CS21);
+		CLEAR_BIT(TCCR2,CS22);
+			
+		// disconnected:
+		CLEAR_BIT(TCCR2,COM20);
+		CLEAR_BIT(TCCR2,COM21);
 	}
 
 	/****************************Timer 2 Interrupt functions*********************************/

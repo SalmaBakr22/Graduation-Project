@@ -12,8 +12,8 @@ int main(void)
 {
 	uart_init(bits_8,bit_1,Disabled,synchronous);
 	Servo_Init();
-	TIMER0_Init(CTC,TIMER0_SCALER_8,Disconnected);
-	TIMER2_Init(cTC,TIMER2_SCALER_8,disconnected);
+	TIMER0_Init();
+	TIMER2_Init();
 	LCD_Init();
 	LCD_GOTO(0,4);
 	LCD_WriteString("Multi Level Garage");

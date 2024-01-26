@@ -23,88 +23,20 @@ static uint32_t C_set=0;
 
 /*------------------------- Function Definition Of initializing the timer 0  -----------------------------*/
 
-void TIMER0_Init(Operation_Mode0 mode,Timer0_Scaler scalar,OC0_Mode OC )
+void TIMER0_Init()
 {
-	switch (mode){
-		case NORMAL_MODE:
-		CLEAR_BIT(TCCR0,WGM00);
-		CLEAR_BIT(TCCR0,WGM01);
-		break;
-		case PWM:
-		SET_BIT(TCCR0,WGM00);
-		CLEAR_BIT(TCCR0,WGM01);
-		break;
-		case CTC:
+		//  CTC:
 		CLEAR_BIT(TCCR0,WGM00);
 		SET_BIT(TCCR0,WGM01);
-		break;
-		case FAST_PWM:
-		SET_BIT(TCCR0,WGM00);
-		SET_BIT(TCCR0,WGM01);
-		break;
-		
-	}
-	switch(scalar){
-		case TIMER0_STOP:
-		CLEAR_BIT(TCCR0,CS00);
-		CLEAR_BIT(TCCR0,CS01);
-		CLEAR_BIT(TCCR0,CS02);
-		break;
-		case TIMER0_SCALER_1:
-		SET_BIT(TCCR0,CS00);
-		CLEAR_BIT(TCCR0,CS01);
-		CLEAR_BIT(TCCR0,CS02);
-		break;
-		case TIMER0_SCALER_8:
+	
+		// TIMER0_SCALER_8:
 		CLEAR_BIT(TCCR0,CS00);
 		SET_BIT(TCCR0,CS01);
 		CLEAR_BIT(TCCR0,CS02);
-		break;
-		case TIMER0_SCALER_64:
-		SET_BIT(TCCR0,CS00);
-		SET_BIT(TCCR0,CS01);
-		CLEAR_BIT(TCCR0,CS02);
-		break;
-		case TIMER0_SCALER_256:
-		CLEAR_BIT(TCCR0,CS00);
-		CLEAR_BIT(TCCR0,CS01);
-		SET_BIT(TCCR0,CS02);
-		break;
-		case TIMER0_SCALER_1024:
-		SET_BIT(TCCR0,CS00);
-		CLEAR_BIT(TCCR0,CS01);
-		SET_BIT(TCCR0,CS02);
-		break;
-		case EXTERNAL0_FALLING:
-		CLEAR_BIT(TCCR0,CS00);
-		SET_BIT(TCCR0,CS01);
-		SET_BIT(TCCR0,CS02);
-		break;
-		case EXTERNAL0_RISING:
-		SET_BIT(TCCR0,CS00);
-		SET_BIT(TCCR0,CS01);
-		SET_BIT(TCCR0,CS02);
-		break;
-
-	}
-	switch (OC){
-		case Disconnected:
+	
+		// Disconnected:
 		CLEAR_BIT(TCCR0,COM00);
 		CLEAR_BIT(TCCR0,COM01);
-		break;
-		case Toggle:
-		SET_BIT(TCCR0,COM00);
-		CLEAR_BIT(TCCR0,COM01);
-		break;
-		case NonInverting:
-		CLEAR_BIT(TCCR0,COM00);
-		SET_BIT(TCCR0,COM01);
-		break;
-		case Inverting:
-		SET_BIT(TCCR0,COM00);
-		SET_BIT(TCCR0,COM01);
-		break;
-	}
 	
 }
 

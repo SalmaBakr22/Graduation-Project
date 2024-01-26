@@ -17,34 +17,11 @@
 #define  NULLptr  ((void*)0)
 
 /*********************************Timer0************************************/
-typedef enum{
-	NORMAL_MODE,
-	PWM,
-	CTC,
-	FAST_PWM
-	}Operation_Mode0;
-	
-typedef enum{
-	TIMER0_STOP=0,
-	TIMER0_SCALER_1,
-	TIMER0_SCALER_8,
-	TIMER0_SCALER_64,
-	TIMER0_SCALER_256,
-	TIMER0_SCALER_1024,
-	EXTERNAL0_FALLING,
-	EXTERNAL0_RISING
-	}Timer0_Scaler;
-	
-typedef enum{
-	Disconnected,
-	Toggle,
-	Inverting,
-	NonInverting
-	}OC0_Mode;
+
 
 /*--------------------- Timer 0 Functions Prototypes ---------------------------*/
 
-void TIMER0_Init(Operation_Mode0 mode,Timer0_Scaler scalar,OC0_Mode OC);
+void TIMER0_Init();
 void TIMER0_OVFInterrupt_Enable(void);
 void TIMER0_OVFInterrupt_Disable(void);
 void TIMER0_OCInterrupt_Enable(void);

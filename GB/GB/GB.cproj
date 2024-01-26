@@ -150,12 +150,6 @@
     <Compile Include="HAL\Buzzer.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="HAL\DCmotor.c">
-      <SubType>compile</SubType>
-    </Compile>
-    <Compile Include="HAL\DCmotor.h">
-      <SubType>compile</SubType>
-    </Compile>
     <Compile Include="HAL\Keypad.c">
       <SubType>compile</SubType>
     </Compile>

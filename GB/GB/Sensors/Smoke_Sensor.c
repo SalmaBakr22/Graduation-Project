@@ -9,5 +9,6 @@
 
 uint8_t Smoke_read(ADC_Channel cha)
 {
-	
+	uint8_t x;
+	return x;
 }

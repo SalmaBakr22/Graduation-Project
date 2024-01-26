@@ -5,7 +5,7 @@
  *  Author: Ali Reda
  */ 
 
-#include "To_Start.h"
+#include "APP.h"
 
 uint8_t flag=0;
 uint8_t flag1=0;
@@ -40,6 +40,7 @@ void Start(void)
 	{
 		flag1=1;
 		Buzzer_off();
+		
 	}
 	// Wireless Charging
 	if (strcmp(str,"WC,on"))

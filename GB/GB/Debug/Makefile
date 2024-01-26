@@ -48,7 +48,6 @@ C_SRCS +=  \
 ../APP/To_Start.c \
 ../APP/To_Take_out.c \
 ../HAL/Buzzer.c \
-../HAL/DCmotor.c \
 ../HAL/Keypad.c \
 ../HAL/LCD.c \
 ../HAL/Limit\ Switch.c \
@@ -90,7 +89,6 @@ APP/To_Park.o \
 APP/To_Start.o \
 APP/To_Take_out.o \
 HAL/Buzzer.o \
-HAL/DCmotor.o \
 HAL/Keypad.o \
 HAL/LCD.o \
 HAL/Limit\ Switch.o \
@@ -125,7 +123,6 @@ APP/To_Park.o \
 APP/To_Start.o \
 APP/To_Take_out.o \
 HAL/Buzzer.o \
-HAL/DCmotor.o \
 HAL/Keypad.o \
 HAL/LCD.o \
 "HAL/Limit Switch.o" \
@@ -160,7 +157,6 @@ APP/To_Park.d \
 APP/To_Start.d \
 APP/To_Take_out.d \
 HAL/Buzzer.d \
-HAL/DCmotor.d \
 HAL/Keypad.d \
 HAL/LCD.d \
 HAL/Limit\ Switch.d \
@@ -195,7 +191,6 @@ APP/To_Park.d \
 APP/To_Start.d \
 APP/To_Take_out.d \
 HAL/Buzzer.d \
-HAL/DCmotor.d \
 HAL/Keypad.d \
 HAL/LCD.d \
 "HAL/Limit Switch.d" \
@@ -267,13 +262,6 @@ APP/To_Take_out.o: ../APP/To_Take_out.c
 	
 
 HAL/Buzzer.o: ../HAL/Buzzer.c
-	@echo Building file: $<
-	@echo Invoking: AVR/GNU C Compiler : 5.4.0
-	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32a -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32a" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
-	@echo Finished building: $<
-	
-
-HAL/DCmotor.o: ../HAL/DCmotor.c
 	@echo Building file: $<
 	@echo Invoking: AVR/GNU C Compiler : 5.4.0
 	$(QUOTE)C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe$(QUOTE)  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega32a -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\gcc\dev\atmega32a" -c -std=gnu99 -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
